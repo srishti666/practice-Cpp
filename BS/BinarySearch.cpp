@@ -1,5 +1,6 @@
 //https://leetcode.com/problems/binary-search/?envType=problem-list-v2&envId=vpt5do15
 //704. Binary Search
+//O(log n)
 
 #include <vector>
 class Solution {
