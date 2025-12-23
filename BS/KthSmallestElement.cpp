@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
 //378. Kth Smallest Element in a Sorted Matrix
-//O(n log(max-min))
+//O(nm log(k))
 
 class Solution {
 public:
