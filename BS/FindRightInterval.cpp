@@ -54,3 +54,28 @@ public:
         return res;
     }
 };
+
+//another sol
+
+class Solution {
+public:
+    vector<int> findRightInterval(vector<vector<int>>& intervals) {
+        map<int, int> mp;
+        
+        for (int i = 0; i < intervals.size(); i++) {
+            mp[intervals[i][0]] = i; 
+        }
+
+        vector<int> res;
+        for (auto& interval : intervals) {
+            auto itr = mp.lower_bound(interval[1]);
+            
+            if (itr == mp.end()) {
+                res.push_back(-1);
+            } else {
+                res.push_back(itr->second);
+            }
+        }
+        return res;
+    }
+};
