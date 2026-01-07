@@ -5,8 +5,6 @@
 
 
 
-
-
 class Solution {
 public:
     bool canSplit(vector<int>& nums, int k, int maxSum) {
