@@ -1,9 +1,9 @@
-//410. Split Array Largest Sum 
+//410. Split Array Largest Sum / Book allocation
 //https://leetcode.com/problems/split-array-largest-sum/description/
 
 //brute force : O(Nlog(Sum))
 
-
+// binary search
 
 class Solution {
 public:
@@ -45,5 +45,44 @@ public:
         }
 
         return result;
+    }
+};
+
+
+//striver solution : https://www.youtube.com/watch?v=thUd_WJn6wk
+
+
+class Solution {
+public:
+    int countStudents(vector<int>& nums, int pages){
+        int students = 1;
+        long long pagesStudents = 0;
+        for(int i = 0; i<nums.size(); i++){
+            if(pagesStudents + nums[i] <= pages){
+                pagesStudents += nums[i];
+            }
+            else {
+                students++;
+                pagesStudents = nums[i];
+            }
+        }
+        return students;
+    }
+
+public:
+    int splitArray(vector<int>& nums, int k) {
+        int low = *max_element(nums.begin(), nums.end());
+        int high = accumulate(nums.begin(), nums.end(),0);
+
+        while(low <= high){
+            int mid = low + (high-low)/2;
+            int students = countStudents(nums, mid);
+
+            if(students > k){
+                low = mid + 1;
+            } 
+            else high = mid - 1;
+        }
+        return low;
     }
 };
