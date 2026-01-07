@@ -51,6 +51,8 @@ public:
 
 //striver solution : https://www.youtube.com/watch?v=thUd_WJn6wk
 
+//O(log(sum-max)*n)
+
 
 class Solution {
 public:
