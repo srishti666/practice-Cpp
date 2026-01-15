@@ -19,3 +19,31 @@ public:
         return ans;
     }
 };
+
+
+//OPTIMIZED
+
+//tc: O(n)
+
+class Solution {
+public:
+    vector<int> findKDistantIndices(vector<int>& nums, int key, int k) {
+        vector<int> ans;
+        int n = nums.size();
+        int last_added = -1;
+
+        for (int j = 0; j < n; j++) {
+            if (nums[j] == key) {
+                int start = max(last_added + 1, j - k);
+                int end = min(n - 1, j + k);
+
+                for (int i = start; i <= end; i++) {
+                    ans.push_back(i);
+                    last_added = i;
+                }
+            }
+        }
+        
+        return ans;
+    }
+};
