@@ -1,6 +1,7 @@
 //665. Non-decreasing Array
 //https://leetcode.com/problems/non-decreasing-array/description/
 
+//TC: O(n) SC: O(1)
 
 class Solution {
 public:
