@@ -1,6 +1,8 @@
 //100. Same Tree
 //https://leetcode.com/problems/same-tree/description/
 
+
+// TC : O(n)
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
