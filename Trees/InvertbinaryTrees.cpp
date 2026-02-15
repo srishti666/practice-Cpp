@@ -1,7 +1,7 @@
 //226. Invert Binary Tree
 //https://leetcode.com/problems/invert-binary-tree/description/
 
-
+//TC: O(n)
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
