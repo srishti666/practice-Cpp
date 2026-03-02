@@ -2,6 +2,7 @@
 
 //https://leetcode.com/problems/reverse-linked-list/description/
 
+//TC : O(n) SC : O(n)
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
