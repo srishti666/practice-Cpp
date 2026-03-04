@@ -1,6 +1,8 @@
 //https://leetcode.com/problems/merge-two-sorted-lists/
 //21. Merge Two Sorted Lists
 // Brute Force
+//TC: O(nlogn)+O(n).    sort : o(nlogn), 2 loops : 2*O(n)
+//SC: O(n) + O(n)
 
 class Solution {
 public:
